@@ -1,0 +1,273 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Top bar styling */
+.top-bar {
+    background-color: #008080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 90%;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+
+/* Navbar styling */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top bar styling */
+.top-bar {
+    background-color: #A8DADC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.contact-info i,
+.social-icons i {
+    margin-right: 8px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1D3557;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: 25rem;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #457B9D;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #E9C46A;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.login {
+    background-color: #FFB300;
+    color: white;
+}
+
+.signup {
+    background-color: #FFB300;
+    color: black;
+}
+
+.auth-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.home {
+    background-color: #fff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.home h2 {
+    font-size: 32px;
+    color: #007b5e;
+    padding: 10px 10px;
+    position: left;
+}
+
+
+.home .link {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+/* About Us */
+.about {
+    background-color: #f9e5ac;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about h2 {
+    color: #007b5e;
+    margin-bottom: 10px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* How It Works */
+.how-it-works {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.how-it-works .steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step {
+    width: 200px;
+}
+
+.step img {
+    width:  100%;
+    border-radius: 5px;
+    padding-bottom: 5%;
+}
+
+/* Our Services */
+.services {
+    background-color: #f9e5ac;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services h2{
+    padding-bottom: 5%;
+}
+
+.service img {
+    width: 50%;
+    padding-bottom: 5%;
+}
+
+/* Why Us */
+.Why Us {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.card img {
+    width: 50px;
+}
+
+/* Footer */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #74B7B7;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-weight: bold;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+}

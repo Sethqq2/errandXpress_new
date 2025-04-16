@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sidebar Navigation</title>
+  <link rel="stylesheet" href="profile.css" />
+  <script src=".js" defer></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="profile">
+      <div class="avatar">J</div>
+      <span>Hi Joe</span>
+    </div>
+    <ul class="menu">
+      <li onclick="navigate('home')">
+        <img src="icons/home.svg" alt="home icon">
+        <span>Home</span>
+      </li>
+      <li onclick="navigate('orders')">
+        <img src="icons/orders.svg" alt="Orders icon">
+        Your orders
+      </li>
+      <li onclick="navigate('errands')">
+        <img src="icons/errands.svg" alt="Errands icon">
+        Your errands
+      </li>
+      <li onclick="navigate('about')">
+        <img src="icons/info.svg" alt="Info icon">
+        About app
+      </li>
+      <li onclick="navigate('logout')">
+        <img src="icons/logout.svg" alt="Logout icon">
+        Logout
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

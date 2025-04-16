@@ -1,0 +1,2164 @@
+{
+  "Final Summary": "This JSON structure provides a detailed representation of the various screens and layouts for ErrandMates application. It covers a wide range of functionalities including user profiles, errand management, chat features, location services, notifications, reviews and ratings, payments and wallet management, help center, admin management, analytics, and offline services. Each screen includes components such as headings, text, buttons, input fields, lists, cards, charts, and more, tailored to specific user roles and actions. This structured JSON can be used to build a comprehensive UI/UX design for the application, ensuring a seamless user experience and efficient service delivery.",
+
+  "application": "ErrandMates",
+  "categories": [
+    {
+      "name": "Authentication",
+      "totalScreens": 10,
+      "screens": [
+        "Sign Up",
+        "Login",
+        "Forgot Password",
+        "Reset Password",
+        "Verify Email",
+        "Account Deactivated",
+        "Two-Factor Authentication",
+        "OAuth Login (Google)",
+        "Account Verification Status",
+        "Change Password (Logged In)"
+      ]
+    },
+    {
+      "name": "User & Helper Management",
+      "totalScreens": 8,
+      "screens": [
+        "User Profile",
+        "Edit Profile",
+        "Helper Profile",
+        "Edit Helper Profile",
+        "Switch Role (User to Helper)",
+        "Upload Verification Documents",
+        "Verification Status",
+        "Manage Availability (Helpers)"
+      ]
+    },
+    {
+      "name": "Errand Management",
+      "totalScreens": 12,
+      "screens": [
+        "Create Errand",
+        "Errand List",
+        "Errand Details",
+        "Edit Errand",
+        "Applied Errands (Helpers)",
+        "Accepted Errands (Helpers)",
+        "Cancel Errand Confirmation",
+        "Completed Errand Summary",
+        "Flag Errand",
+        "Errand History",
+        "Apply for Errand",
+        "Payment Confirmation for Errand"
+      ]
+    },
+    {
+      "name": "Chat Functionality",
+      "totalScreens": 5,
+      "screens": [
+        "Chat List",
+        "Chat Screen",
+        "Chat Media",
+        "Report Chat",
+        "Chat Notification Settings"
+      ]
+    },
+    {
+      "name": "Location Finder",
+      "totalScreens": 6,
+      "screens": [
+        "Search Locations",
+        "Location Details",
+        "Saved Locations",
+        "Get Directions",
+        "Reverse Geocode",
+        "Delete Saved Location Confirmation"
+      ]
+    },
+    {
+      "name": "Notifications",
+      "totalScreens": 5,
+      "screens": [
+        "Notification List",
+        "Notification Details",
+        "Notification Settings",
+        "Send Notification (Admin)",
+        "Confirm Notification Deletion"
+      ]
+    },
+    {
+      "name": "Reviews & Ratings",
+      "totalScreens": 5,
+      "screens": [
+        "Submit Review",
+        "View Reviews for User/Helper",
+        "My Reviews",
+        "Confirm Review Deletion",
+        "Report Review"
+      ]
+    },
+    {
+      "name": "Payments & Wallet",
+      "totalScreens": 6,
+      "screens": [
+        "Wallet Overview",
+        "Top-Up Wallet",
+        "Payment Details",
+        "Confirm Refund",
+        "Earnings Summary (Helper)",
+        "Withdraw Funds (Helper)"
+      ]
+    },
+    {
+      "name": "Help Centre",
+      "totalScreens": 6,
+      "screens": [
+        "Help Centre Home",
+        "FAQ Article",
+        "Contact Support",
+        "My Help Tickets",
+        "Ticket Details",
+        "Delete Help Ticket Confirmation"
+      ]
+    },
+    {
+      "name": "Admin Management",
+      "totalScreens": 6,
+      "screens": [
+        "Admin Dashboard",
+        "Manage Users",
+        "Manage Helpers",
+        "Manage Errands",
+        "User Details (Admin)",
+        "Reports & Analytics"
+      ]
+    },
+    {
+      "name": "Analytics",
+      "totalScreens": 3,
+      "screens": [
+        "User Analytics Dashboard",
+        "Helper Analytics Dashboard",
+        "Platform Analytics Dashboard"
+      ]
+    },
+    {
+      "name": "Offline Services",
+      "totalScreens": 5,
+      "screens": [
+        "Offline Booking",
+        "Booking Status",
+        "Offline Feedback",
+        "Booking Confirmation",
+        "Booking Error"
+      ]
+    }
+  ],
+  "totalScreens": 71,
+
+  "category 1": "Authentication",
+  "screens 1": [
+    {
+      "name": "Welcome Screen",
+      "layout": [
+        {
+          "component": "Logo",
+          "type": "Image",
+          "position": "center-top"
+        },
+        {
+          "component": "Title",
+          "type": "Text",
+          "content": "Welcome to ErrandMates",
+          "position": "below-logo"
+        },
+        {
+          "component": "Primary Button",
+          "type": "Button",
+          "label": "Sign Up",
+          "action": "navigateTo('/signup')"
+        },
+        {
+          "component": "Secondary Button",
+          "type": "Button",
+          "label": "Log In",
+          "action": "navigateTo('/login')"
+        }
+      ]
+    },
+    {
+      "name": "Login Screen",
+      "layout": [
+        {
+          "component": "Logo",
+          "type": "Image",
+          "position": "center-top"
+        },
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Log In",
+          "position": "below-logo"
+        },
+        {
+          "component": "Email Input",
+          "type": "Input",
+          "placeholder": "Enter your email",
+          "inputType": "email"
+        },
+        {
+          "component": "Password Input",
+          "type": "Input",
+          "placeholder": "Enter your password",
+          "inputType": "password"
+        },
+        {
+          "component": "Primary Button",
+          "type": "Button",
+          "label": "Log In",
+          "action": "submitForm()"
+        },
+        {
+          "component": "Link",
+          "type": "Text Link",
+          "label": "Forgot Password?",
+          "action": "navigateTo('/forgot-password')"
+        },
+        {
+          "component": "Divider",
+          "type": "Divider",
+          "content": "OR"
+        },
+        {
+          "component": "Google Login Button",
+          "type": "Button",
+          "label": "Log in with Google",
+          "action": "triggerOAuth('google')"
+        }
+      ]
+    },
+    {
+      "name": "Sign Up Screen",
+      "layout": [
+        {
+          "component": "Logo",
+          "type": "Image",
+          "position": "center-top"
+        },
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Create Your Account",
+          "position": "below-logo"
+        },
+        {
+          "component": "Email Input",
+          "type": "Input",
+          "placeholder": "Enter your email",
+          "inputType": "email"
+        },
+        {
+          "component": "Password Input",
+          "type": "Input",
+          "placeholder": "Create your password",
+          "inputType": "password"
+        },
+        {
+          "component": "Confirm Password Input",
+          "type": "Input",
+          "placeholder": "Confirm your password",
+          "inputType": "password"
+        },
+        {
+          "component": "Primary Button",
+          "type": "Button",
+          "label": "Sign Up",
+          "action": "submitForm()"
+        },
+        {
+          "component": "Google Sign Up Button",
+          "type": "Button",
+          "label": "Sign up with Google",
+          "action": "triggerOAuth('google')"
+        },
+        {
+          "component": "Link",
+          "type": "Text Link",
+          "label": "Already have an account? Log in",
+          "action": "navigateTo('/login')"
+        }
+      ]
+    },
+    {
+      "name": "Forgot Password Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Forgot Password"
+        },
+        {
+          "component": "Email Input",
+          "type": "Input",
+          "placeholder": "Enter your email",
+          "inputType": "email"
+        },
+        {
+          "component": "Primary Button",
+          "type": "Button",
+          "label": "Send Reset Link",
+          "action": "submitForm()"
+        },
+        {
+          "component": "Link",
+          "type": "Text Link",
+          "label": "Back to Login",
+          "action": "navigateTo('/login')"
+        }
+      ]
+    },
+    {
+      "name": "Reset Password Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Reset Password"
+        },
+        {
+          "component": "Password Input",
+          "type": "Input",
+          "placeholder": "Enter new password",
+          "inputType": "password"
+        },
+        {
+          "component": "Confirm Password Input",
+          "type": "Input",
+          "placeholder": "Confirm new password",
+          "inputType": "password"
+        },
+        {
+          "component": "Primary Button",
+          "type": "Button",
+          "label": "Reset Password",
+          "action": "submitForm()"
+        }
+      ]
+    }
+  ],
+
+  "category 2": "User & Helper Management",
+  "screens 2": [
+    {
+      "name": "User Profile Screen",
+      "layout": [
+        {
+          "component": "Profile Picture",
+          "type": "Image",
+          "position": "top-center"
+        },
+        {
+          "component": "Name Field",
+          "type": "Text",
+          "label": "Name",
+          "value": "John Doe"
+        },
+        {
+          "component": "Email Field",
+          "type": "Text",
+          "label": "Email",
+          "value": "john@example.com"
+        },
+        {
+          "component": "Phone Field",
+          "type": "Text",
+          "label": "Phone Number",
+          "value": "+23480000000"
+        },
+        {
+          "component": "Government ID Field",
+          "type": "Text",
+          "label": "Government ID",
+          "value": "NIN12345678"
+        },
+        { "component": "Role Display", "type": "Badge", "value": "User" },
+        {
+          "component": "Edit Profile Button",
+          "type": "Button",
+          "label": "Edit Profile",
+          "action": "navigateTo('/profile/edit')"
+        },
+        {
+          "component": "Switch to Helper Button",
+          "type": "Button",
+          "label": "Switch to Helper",
+          "action": "initiateRoleSwitch()"
+        }
+      ]
+    },
+    {
+      "name": "Edit Profile Screen",
+      "layout": [
+        { "component": "Profile Picture Upload", "type": "ImageUploader" },
+        {
+          "component": "Name Input",
+          "type": "Input",
+          "placeholder": "Enter your name"
+        },
+        {
+          "component": "Phone Input",
+          "type": "Input",
+          "placeholder": "Enter your phone number"
+        },
+        {
+          "component": "Government ID Input",
+          "type": "Input",
+          "placeholder": "Enter your NIN, BVN, or Passport Number"
+        },
+        {
+          "component": "DOB Input",
+          "type": "DatePicker",
+          "label": "Date of Birth"
+        },
+        {
+          "component": "Save Changes Button",
+          "type": "Button",
+          "label": "Save Changes",
+          "action": "submitForm()"
+        }
+      ]
+    },
+    {
+      "name": "Helper Profile Screen",
+      "layout": [
+        {
+          "component": "Profile Picture",
+          "type": "Image",
+          "position": "top-center"
+        },
+        {
+          "component": "Name Field",
+          "type": "Text",
+          "label": "Name",
+          "value": "Jane Doe"
+        },
+        {
+          "component": "Email Field",
+          "type": "Text",
+          "label": "Email",
+          "value": "jane@example.com"
+        },
+        {
+          "component": "Phone Field",
+          "type": "Text",
+          "label": "Phone Number",
+          "value": "+23480000000"
+        },
+        {
+          "component": "Government ID Field",
+          "type": "Text",
+          "label": "Government ID",
+          "value": "NIN12345678"
+        },
+        {
+          "component": "Verification Badge",
+          "type": "Badge",
+          "value": "Verified"
+        },
+        { "component": "Rating Display", "type": "Stars", "value": 4.7 },
+        {
+          "component": "Helper Bio",
+          "type": "TextArea",
+          "value": "Experienced cleaner with 5 years of service."
+        },
+        {
+          "component": "Switch to User Button",
+          "type": "Button",
+          "label": "Switch to User",
+          "action": "initiateRoleSwitch()"
+        }
+      ]
+    },
+    {
+      "name": "Role Switching Confirmation Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Switch Role" },
+        {
+          "component": "Info Text",
+          "type": "Text",
+          "content": "You are about to switch your role to Helper. This will require admin approval."
+        },
+        {
+          "component": "Confirm Button",
+          "type": "Button",
+          "label": "Confirm",
+          "action": "confirmRoleSwitch()"
+        },
+        {
+          "component": "Cancel Button",
+          "type": "Button",
+          "label": "Cancel",
+          "action": "navigateBack()"
+        }
+      ]
+    },
+    {
+      "name": "Helper Verification Status Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Verification Status"
+        },
+        { "component": "Status Badge", "type": "Badge", "value": "Pending" },
+        {
+          "component": "Instructions",
+          "type": "Text",
+          "content": "Your documents have been submitted for verification. We will notify you once reviewed."
+        }
+      ]
+    },
+    {
+      "name": "Helper Onboarding Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Helper Onboarding"
+        },
+        {
+          "component": "Document Upload Section",
+          "type": "DocumentUploader",
+          "documents": ["NIN", "Government ID", "Certificate"]
+        },
+        {
+          "component": "Skill Selection",
+          "type": "MultiSelect",
+          "options": ["Cleaning", "Errand Running", "Plumbing", "Cooking"]
+        },
+        {
+          "component": "Bio Input",
+          "type": "TextArea",
+          "placeholder": "Describe your skills and experience"
+        },
+        {
+          "component": "Submit Button",
+          "type": "Button",
+          "label": "Submit for Verification",
+          "action": "submitOnboarding()"
+        }
+      ]
+    }
+  ],
+
+  "category 3": "Errand Management",
+  "screens 3": [
+    {
+      "name": "Create Errand Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Create New Errand"
+        },
+        {
+          "component": "Title Input",
+          "type": "Input",
+          "placeholder": "Enter errand title"
+        },
+        {
+          "component": "Description Input",
+          "type": "TextArea",
+          "placeholder": "Describe the errand"
+        },
+        {
+          "component": "Category Dropdown",
+          "type": "Dropdown",
+          "options": ["Cleaning", "Shopping", "Repairs"]
+        },
+        {
+          "component": "Price Input",
+          "type": "Input",
+          "placeholder": "Enter price (NGN)"
+        },
+        {
+          "component": "Location Picker",
+          "type": "MapPicker",
+          "action": "selectLocation()"
+        },
+        { "component": "Photo Uploader", "type": "ImageUploader", "limit": 5 },
+        {
+          "component": "Submit Button",
+          "type": "Button",
+          "label": "Post Errand",
+          "action": "submitErrand()"
+        }
+      ]
+    },
+    {
+      "name": "Errand List Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "My Errands" },
+        {
+          "component": "Filter Dropdown",
+          "type": "Dropdown",
+          "options": ["All", "Pending", "In Progress", "Completed", "Cancelled"]
+        },
+        {
+          "component": "Errand Card List",
+          "type": "CardList",
+          "items": "fetchErrands()"
+        }
+      ]
+    },
+    {
+      "name": "Errand Details Screen",
+      "layout": [
+        { "component": "Title", "type": "Text", "content": "Errand Title" },
+        { "component": "Category", "type": "Badge", "content": "Category" },
+        {
+          "component": "Description",
+          "type": "Text",
+          "content": "Full errand description."
+        },
+        { "component": "Location", "type": "MapDisplay" },
+        { "component": "Photos", "type": "ImageGallery" },
+        {
+          "component": "Applicants List",
+          "type": "List",
+          "items": "fetchApplicants()"
+        },
+        {
+          "component": "Cancel Button",
+          "type": "Button",
+          "label": "Cancel Errand",
+          "action": "cancelErrand()"
+        },
+        {
+          "component": "Mark Completed Button",
+          "type": "Button",
+          "label": "Mark Completed",
+          "action": "markCompleted()"
+        }
+      ]
+    },
+    {
+      "name": "Edit Errand Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Edit Errand" },
+        {
+          "component": "Title Input",
+          "type": "Input",
+          "value": "Pre-filled title"
+        },
+        {
+          "component": "Description Input",
+          "type": "TextArea",
+          "value": "Pre-filled description"
+        },
+        {
+          "component": "Category Dropdown",
+          "type": "Dropdown",
+          "value": "Pre-filled category"
+        },
+        {
+          "component": "Price Input",
+          "type": "Input",
+          "value": "Pre-filled price"
+        },
+        {
+          "component": "Update Button",
+          "type": "Button",
+          "label": "Update Errand",
+          "action": "updateErrand()"
+        }
+      ]
+    },
+    {
+      "name": "Helper Applied Errands Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Errands You Applied For"
+        },
+        {
+          "component": "Errand Card List",
+          "type": "CardList",
+          "items": "fetchAppliedErrands()"
+        }
+      ]
+    },
+    {
+      "name": "Helper Accepted Errands Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Assigned Errands"
+        },
+        {
+          "component": "Errand Card List",
+          "type": "CardList",
+          "items": "fetchAcceptedErrands()"
+        }
+      ]
+    },
+    {
+      "name": "Cancel Errand Confirmation Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Cancel Errand" },
+        {
+          "component": "Confirmation Text",
+          "type": "Text",
+          "content": "Are you sure you want to cancel this errand?"
+        },
+        {
+          "component": "Confirm Button",
+          "type": "Button",
+          "label": "Yes, Cancel",
+          "action": "confirmCancelErrand()"
+        },
+        {
+          "component": "Back Button",
+          "type": "Button",
+          "label": "No, Go Back",
+          "action": "navigateBack()"
+        }
+      ]
+    },
+    {
+      "name": "Completed Errand Summary Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Errand Completed"
+        },
+        {
+          "component": "Summary Card",
+          "type": "Card",
+          "content": "Summary of work done, total cost, etc."
+        },
+        {
+          "component": "Rate Helper Button",
+          "type": "Button",
+          "label": "Rate Helper",
+          "action": "navigateTo('/rate-helper')"
+        }
+      ]
+    },
+    {
+      "name": "Flag Errand Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Report Errand" },
+        {
+          "component": "Reason Dropdown",
+          "type": "Dropdown",
+          "options": ["Scam", "Inappropriate Content", "Others"]
+        },
+        {
+          "component": "Additional Comments",
+          "type": "TextArea",
+          "placeholder": "Provide more details"
+        },
+        {
+          "component": "Submit Button",
+          "type": "Button",
+          "label": "Submit Report",
+          "action": "submitFlag()"
+        }
+      ]
+    },
+    {
+      "name": "Review Errand History Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Errand History" },
+        {
+          "component": "Errand Card List",
+          "type": "CardList",
+          "items": "fetchErrandHistory()"
+        }
+      ]
+    },
+    {
+      "name": "Apply for Errand Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Apply for Errand"
+        },
+        {
+          "component": "Application Note",
+          "type": "TextArea",
+          "placeholder": "Add a note to the user"
+        },
+        {
+          "component": "Submit Application Button",
+          "type": "Button",
+          "label": "Apply",
+          "action": "submitApplication()"
+        }
+      ]
+    },
+    {
+      "name": "Errand Payment Confirmation Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Confirm Payment"
+        },
+        { "component": "Payment Summary", "type": "SummaryCard" },
+        {
+          "component": "Pay Now Button",
+          "type": "Button",
+          "label": "Pay Now",
+          "action": "confirmPayment()"
+        }
+      ]
+    }
+  ],
+
+  "category 4": "Chat Functionality",
+  "screens 4": [
+    {
+      "name": "Chat List Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Chats" },
+        {
+          "component": "Search Bar",
+          "type": "SearchInput",
+          "placeholder": "Search chats"
+        },
+        {
+          "component": "Chat List",
+          "type": "List",
+          "items": "fetchUserChats()"
+        },
+        {
+          "component": "Each Chat Item",
+          "type": "ListItem",
+          "content": "User/Helper Name, Last Message, Timestamp",
+          "action": "navigateTo('/chat/{chatId}')"
+        }
+      ]
+    },
+    {
+      "name": "Chat Screen",
+      "layout": [
+        {
+          "component": "Header",
+          "type": "AppBar",
+          "title": "Chat with {User/Helper Name}",
+          "actions": ["Back", "Report"]
+        },
+        {
+          "component": "Message List",
+          "type": "List",
+          "items": "fetchChatMessages({chatId})"
+        },
+        {
+          "component": "Image Preview (optional)",
+          "type": "ImagePreview",
+          "visibleWhen": "imageSelected"
+        },
+        {
+          "component": "Message Input",
+          "type": "Input",
+          "placeholder": "Type a message"
+        },
+        {
+          "component": "Attachment Button",
+          "type": "Button",
+          "icon": "📎",
+          "action": "openMediaOptions()"
+        },
+        {
+          "component": "Send Button",
+          "type": "Button",
+          "icon": "➤",
+          "action": "sendMessage()"
+        }
+      ]
+    },
+    {
+      "name": "Chat Media Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Media & Files" },
+        {
+          "component": "Media Grid",
+          "type": "Grid",
+          "items": "fetchChatMedia({chatId})"
+        },
+        {
+          "component": "Download Button",
+          "type": "Button",
+          "label": "Download",
+          "action": "downloadMedia()"
+        }
+      ]
+    },
+    {
+      "name": "Report Chat Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Report Chat" },
+        {
+          "component": "User Name",
+          "type": "Text",
+          "content": "Reporting: {User/Helper Name}"
+        },
+        {
+          "component": "Reason Dropdown",
+          "type": "Dropdown",
+          "options": ["Harassment", "Scam", "Inappropriate Content", "Others"]
+        },
+        {
+          "component": "Additional Comments",
+          "type": "TextArea",
+          "placeholder": "Provide additional details"
+        },
+        {
+          "component": "Submit Report Button",
+          "type": "Button",
+          "label": "Submit Report",
+          "action": "submitChatReport()"
+        }
+      ]
+    },
+    {
+      "name": "Chat Notification Settings Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Chat Notifications"
+        },
+        {
+          "component": "Toggle - Receive New Chat Alerts",
+          "type": "Toggle",
+          "value": "chatNotificationsEnabled"
+        },
+        {
+          "component": "Toggle - In-App Message Previews",
+          "type": "Toggle",
+          "value": "previewEnabled"
+        },
+        {
+          "component": "Save Button",
+          "type": "Button",
+          "label": "Save Preferences",
+          "action": "saveChatPreferences()"
+        }
+      ]
+    }
+  ],
+
+  "category 5": "Location Finder",
+  "screens 5": [
+    {
+      "name": "Search Locations Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Search Locations"
+        },
+        {
+          "component": "Search Bar",
+          "type": "SearchInput",
+          "placeholder": "Search nearby locations"
+        },
+        {
+          "component": "Location List",
+          "type": "List",
+          "items": "fetchNearbyLocations()"
+        },
+        {
+          "component": "Each Location Item",
+          "type": "ListItem",
+          "content": "Location Name, Distance",
+          "action": "navigateTo('/location/details/{locationId}')"
+        }
+      ]
+    },
+    {
+      "name": "Location Details Screen",
+      "layout": [
+        {
+          "component": "Map Display",
+          "type": "Map",
+          "location": "currentLocation"
+        },
+        {
+          "component": "Location Name",
+          "type": "Text",
+          "content": "{Location Name}"
+        },
+        {
+          "component": "Location Address",
+          "type": "Text",
+          "content": "{Location Address}"
+        },
+        {
+          "component": "Save to Favorites Button",
+          "type": "Button",
+          "label": "Save to Favorites",
+          "action": "saveLocationToFavorites()"
+        },
+        {
+          "component": "Get Directions Button",
+          "type": "Button",
+          "label": "Get Directions",
+          "action": "openDirections()"
+        }
+      ]
+    },
+    {
+      "name": "Saved Locations Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Saved Locations"
+        },
+        {
+          "component": "Location List",
+          "type": "List",
+          "items": "fetchSavedLocations()"
+        },
+        {
+          "component": "Each Saved Location",
+          "type": "ListItem",
+          "content": "Location Name, Address",
+          "actions": [
+            "navigateTo('/location/details/{locationId}')",
+            "deleteLocation()"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Get Directions Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Directions" },
+        {
+          "component": "Start Location",
+          "type": "Text",
+          "content": "{Current Location}"
+        },
+        {
+          "component": "Destination Location",
+          "type": "Text",
+          "content": "{Destination Location}"
+        },
+        {
+          "component": "Route Map",
+          "type": "Map",
+          "route": "fetchDirections()"
+        },
+        {
+          "component": "Estimated Time & Distance",
+          "type": "Text",
+          "content": "{ETA} - {Distance}"
+        }
+      ]
+    },
+    {
+      "name": "Reverse Geocode Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Find Location from Coordinates"
+        },
+        {
+          "component": "Latitude Input",
+          "type": "Input",
+          "placeholder": "Enter Latitude"
+        },
+        {
+          "component": "Longitude Input",
+          "type": "Input",
+          "placeholder": "Enter Longitude"
+        },
+        {
+          "component": "Find Address Button",
+          "type": "Button",
+          "label": "Find Address",
+          "action": "fetchAddressFromCoordinates()"
+        },
+        {
+          "component": "Result Address",
+          "type": "Text",
+          "content": "{Fetched Address}",
+          "visibleWhen": "addressFound"
+        }
+      ]
+    },
+    {
+      "name": "Delete Saved Location Confirmation Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Delete Location"
+        },
+        {
+          "component": "Confirmation Text",
+          "type": "Text",
+          "content": "Are you sure you want to delete this saved location?"
+        },
+        {
+          "component": "Confirm Button",
+          "type": "Button",
+          "label": "Yes, Delete",
+          "action": "confirmDeleteLocation()"
+        },
+        {
+          "component": "Cancel Button",
+          "type": "Button",
+          "label": "Cancel",
+          "action": "navigateBack()"
+        }
+      ]
+    }
+  ],
+
+  "category 6": "Notifications",
+  "screens 6": [
+    {
+      "name": "Notifications List Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Notifications" },
+        {
+          "component": "Filter Dropdown",
+          "type": "Dropdown",
+          "options": [
+            "All",
+            "Unread",
+            "Priority: High",
+            "Priority: Medium",
+            "Priority: Low"
+          ]
+        },
+        {
+          "component": "Notification List",
+          "type": "List",
+          "items": "fetchNotifications()"
+        },
+        {
+          "component": "Notification Item",
+          "type": "ListItem",
+          "content": "Title, Description, Timestamp, Priority (Badge)",
+          "actions": [
+            "markAsRead()",
+            "navigateTo('/notification/details/{notificationId}')"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Notification Details Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Notification Details"
+        },
+        {
+          "component": "Title",
+          "type": "Text",
+          "content": "{Notification Title}"
+        },
+        { "component": "Timestamp", "type": "Text", "content": "{Timestamp}" },
+        {
+          "component": "Priority Badge",
+          "type": "Badge",
+          "content": "{Priority Level}"
+        },
+        {
+          "component": "Notification Body",
+          "type": "Text",
+          "content": "{Notification Content}"
+        },
+        {
+          "component": "Mark As Read Button",
+          "type": "Button",
+          "label": "Mark as Read",
+          "action": "markNotificationAsRead()"
+        },
+        {
+          "component": "Delete Notification Button",
+          "type": "Button",
+          "label": "Delete Notification",
+          "action": "deleteNotification()"
+        }
+      ]
+    },
+    {
+      "name": "Notification Settings Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Notification Settings"
+        },
+        {
+          "component": "Toggle - Push Notifications",
+          "type": "Toggle",
+          "value": "pushNotificationsEnabled"
+        },
+        {
+          "component": "Toggle - Email Notifications",
+          "type": "Toggle",
+          "value": "emailNotificationsEnabled"
+        },
+        {
+          "component": "Toggle - SMS Notifications",
+          "type": "Toggle",
+          "value": "smsNotificationsEnabled"
+        },
+        {
+          "component": "Save Button",
+          "type": "Button",
+          "label": "Save Preferences",
+          "action": "saveNotificationPreferences()"
+        }
+      ]
+    },
+    {
+      "name": "Send Notification Screen (Admin Only)",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Send Notification"
+        },
+        {
+          "component": "Recipient Dropdown",
+          "type": "Dropdown",
+          "options": ["All Users", "Specific User/Helper"],
+          "action": "selectRecipient()"
+        },
+        {
+          "component": "Title Input",
+          "type": "Input",
+          "placeholder": "Notification Title"
+        },
+        {
+          "component": "Message Input",
+          "type": "TextArea",
+          "placeholder": "Enter notification message"
+        },
+        {
+          "component": "Priority Dropdown",
+          "type": "Dropdown",
+          "options": ["Low", "Medium", "High"]
+        },
+        {
+          "component": "Send Button",
+          "type": "Button",
+          "label": "Send Notification",
+          "action": "sendNotification()"
+        }
+      ]
+    },
+    {
+      "name": "Confirm Notification Deletion Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Delete Notification"
+        },
+        {
+          "component": "Confirmation Text",
+          "type": "Text",
+          "content": "Are you sure you want to delete this notification?"
+        },
+        {
+          "component": "Confirm Button",
+          "type": "Button",
+          "label": "Yes, Delete",
+          "action": "confirmDeleteNotification()"
+        },
+        {
+          "component": "Cancel Button",
+          "type": "Button",
+          "label": "Cancel",
+          "action": "navigateBack()"
+        }
+      ]
+    }
+  ],
+
+  "category 7": "Reviews & Ratings",
+  "screens 7": [
+    {
+      "name": "Submit Review Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Rate Your Experience"
+        },
+        {
+          "component": "Helper Name",
+          "type": "Text",
+          "content": "Helper: {Helper Name}"
+        },
+        {
+          "component": "Rating Stars",
+          "type": "StarRating",
+          "maxStars": 5,
+          "value": 0,
+          "action": "setRating()"
+        },
+        {
+          "component": "Review Text Area",
+          "type": "TextArea",
+          "placeholder": "Write a review (optional)"
+        },
+        {
+          "component": "Submit Button",
+          "type": "Button",
+          "label": "Submit Review",
+          "action": "submitReview()"
+        }
+      ]
+    },
+    {
+      "name": "View Reviews for User/Helper Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Reviews for {User/Helper Name}"
+        },
+        {
+          "component": "Average Rating Display",
+          "type": "StarRating",
+          "maxStars": 5,
+          "value": "{AverageRating}"
+        },
+        {
+          "component": "Total Reviews Count",
+          "type": "Text",
+          "content": "{TotalReviews} Reviews"
+        },
+        {
+          "component": "Review List",
+          "type": "List",
+          "items": "fetchReviews({userId})"
+        },
+        {
+          "component": "Review Item",
+          "type": "ListItem",
+          "content": "Reviewer Name, Rating (Stars), Review Text, Date",
+          "actions": ["reportReview()"]
+        }
+      ]
+    },
+    {
+      "name": "My Reviews Screen (User or Helper)",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "My Reviews" },
+        {
+          "component": "Review List",
+          "type": "List",
+          "items": "fetchMyReviews()"
+        },
+        {
+          "component": "Review Item",
+          "type": "ListItem",
+          "content": "Reviewer Name, Rating (Stars), Review Text, Date",
+          "actions": ["deleteReview()"]
+        }
+      ]
+    },
+    {
+      "name": "Confirm Review Deletion Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Delete Review" },
+        {
+          "component": "Confirmation Text",
+          "type": "Text",
+          "content": "Are you sure you want to delete this review?"
+        },
+        {
+          "component": "Confirm Button",
+          "type": "Button",
+          "label": "Yes, Delete",
+          "action": "confirmDeleteReview()"
+        },
+        {
+          "component": "Cancel Button",
+          "type": "Button",
+          "label": "Cancel",
+          "action": "navigateBack()"
+        }
+      ]
+    },
+    {
+      "name": "Report Review Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Report Review" },
+        {
+          "component": "Review Excerpt",
+          "type": "Text",
+          "content": "Review: {Excerpt}"
+        },
+        {
+          "component": "Reason Dropdown",
+          "type": "Dropdown",
+          "options": ["Abusive", "False Information", "Other"]
+        },
+        {
+          "component": "Additional Comments",
+          "type": "TextArea",
+          "placeholder": "Provide more details (optional)"
+        },
+        {
+          "component": "Submit Button",
+          "type": "Button",
+          "label": "Report Review",
+          "action": "submitReviewReport()"
+        }
+      ]
+    }
+  ],
+
+  "category 8": "Payments & Wallet",
+  "screens 8": [
+    {
+      "name": "Wallet Overview Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "My Wallet" },
+        {
+          "component": "Current Balance",
+          "type": "Text",
+          "content": "Balance: ₦{walletBalance}"
+        },
+        {
+          "component": "Top-Up Button",
+          "type": "Button",
+          "label": "Top-Up Wallet",
+          "action": "navigateTo('/wallet/top-up')"
+        },
+        {
+          "component": "Payment History List",
+          "type": "List",
+          "items": "fetchPaymentHistory()"
+        },
+        {
+          "component": "Payment Item",
+          "type": "ListItem",
+          "content": "Date, Amount, Type (Credit/Debit), Status",
+          "action": "navigateTo('/payment/details/{paymentId}')"
+        }
+      ]
+    },
+    {
+      "name": "Top-Up Wallet Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Top-Up Wallet" },
+        {
+          "component": "Amount Input",
+          "type": "Input",
+          "placeholder": "Enter Amount"
+        },
+        {
+          "component": "Payment Method Dropdown",
+          "type": "Dropdown",
+          "options": ["Bank Transfer", "Card Payment"]
+        },
+        {
+          "component": "Proceed Button",
+          "type": "Button",
+          "label": "Proceed to Payment",
+          "action": "initiateTopUp()"
+        }
+      ]
+    },
+    {
+      "name": "Payment Details Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Payment Details"
+        },
+        {
+          "component": "Transaction ID",
+          "type": "Text",
+          "content": "Transaction ID: {transactionId}"
+        },
+        {
+          "component": "Amount",
+          "type": "Text",
+          "content": "Amount: ₦{amount}"
+        },
+        {
+          "component": "Type",
+          "type": "Text",
+          "content": "Type: {paymentType}"
+        },
+        { "component": "Date", "type": "Text", "content": "Date: {date}" },
+        { "component": "Status", "type": "Badge", "content": "{status}" }
+      ]
+    },
+    {
+      "name": "Confirm Refund Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Request Refund" },
+        {
+          "component": "Errand Title",
+          "type": "Text",
+          "content": "Errand: {errandTitle}"
+        },
+        {
+          "component": "Reason Text Area",
+          "type": "TextArea",
+          "placeholder": "Explain why you are requesting a refund"
+        },
+        {
+          "component": "Submit Refund Request Button",
+          "type": "Button",
+          "label": "Submit Refund Request",
+          "action": "submitRefund()"
+        }
+      ]
+    },
+    {
+      "name": "Earnings Summary Screen (For Helpers)",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Earnings Summary"
+        },
+        {
+          "component": "Total Earnings",
+          "type": "Text",
+          "content": "Total: ₦{totalEarnings}"
+        },
+        {
+          "component": "Withdraw Funds Button",
+          "type": "Button",
+          "label": "Withdraw Funds",
+          "action": "navigateTo('/wallet/withdraw')"
+        },
+        {
+          "component": "Earnings History List",
+          "type": "List",
+          "items": "fetchEarningsHistory()"
+        }
+      ]
+    },
+    {
+      "name": "Withdraw Funds Screen (For Helpers)",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Withdraw Funds" },
+        {
+          "component": "Amount Input",
+          "type": "Input",
+          "placeholder": "Enter Amount to Withdraw"
+        },
+        {
+          "component": "Bank Account Dropdown",
+          "type": "Dropdown",
+          "options": "fetchLinkedBankAccounts()"
+        },
+        {
+          "component": "Withdraw Button",
+          "type": "Button",
+          "label": "Withdraw Funds",
+          "action": "submitWithdrawal()"
+        }
+      ]
+    }
+  ],
+
+  "category 9": "Help Centre",
+  "screens 9": [
+    {
+      "name": "Help Centre Home Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Help Centre" },
+        {
+          "component": "Search Bar",
+          "type": "SearchInput",
+          "placeholder": "Search FAQs"
+        },
+        { "component": "FAQ List", "type": "List", "items": "fetchFAQs()" },
+        {
+          "component": "FAQ Item",
+          "type": "ListItem",
+          "content": "Question, Category",
+          "action": "navigateTo('/help/article/{articleId}')"
+        },
+        {
+          "component": "Contact Support Button",
+          "type": "Button",
+          "label": "Contact Support",
+          "action": "navigateTo('/help/contact')"
+        }
+      ]
+    },
+    {
+      "name": "FAQ Article Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "{Article Title}"
+        },
+        {
+          "component": "Article Body",
+          "type": "Text",
+          "content": "{Article Content}"
+        },
+        {
+          "component": "Back Button",
+          "type": "Button",
+          "label": "Back to FAQs",
+          "action": "navigateBack()"
+        }
+      ]
+    },
+    {
+      "name": "Contact Support Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Contact Support"
+        },
+        {
+          "component": "Subject Input",
+          "type": "Input",
+          "placeholder": "Enter subject"
+        },
+        {
+          "component": "Message Input",
+          "type": "TextArea",
+          "placeholder": "Describe your issue"
+        },
+        {
+          "component": "Attach Screenshot (optional)",
+          "type": "ImageUploader"
+        },
+        {
+          "component": "Submit Button",
+          "type": "Button",
+          "label": "Submit Ticket",
+          "action": "submitSupportTicket()"
+        }
+      ]
+    },
+    {
+      "name": "My Help Tickets Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "My Help Tickets"
+        },
+        {
+          "component": "Ticket List",
+          "type": "List",
+          "items": "fetchUserTickets()"
+        },
+        {
+          "component": "Ticket Item",
+          "type": "ListItem",
+          "content": "Subject, Status, Created Date",
+          "action": "navigateTo('/help/ticket/{ticketId}')"
+        }
+      ]
+    },
+    {
+      "name": "Ticket Details Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Ticket Details" },
+        {
+          "component": "Subject",
+          "type": "Text",
+          "content": "{Ticket Subject}"
+        },
+        {
+          "component": "Status Badge",
+          "type": "Badge",
+          "content": "{Ticket Status}"
+        },
+        {
+          "component": "Created Date",
+          "type": "Text",
+          "content": "{Created Date}"
+        },
+        {
+          "component": "Message History",
+          "type": "Text",
+          "content": "{Full Conversation History}"
+        },
+        {
+          "component": "Add Reply Input",
+          "type": "TextArea",
+          "placeholder": "Add reply (optional)"
+        },
+        {
+          "component": "Submit Reply Button",
+          "type": "Button",
+          "label": "Submit Reply",
+          "action": "submitTicketReply()"
+        }
+      ]
+    },
+    {
+      "name": "Delete Help Ticket Confirmation Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Delete Ticket" },
+        {
+          "component": "Confirmation Text",
+          "type": "Text",
+          "content": "Are you sure you want to delete this help ticket?"
+        },
+        {
+          "component": "Confirm Button",
+          "type": "Button",
+          "label": "Yes, Delete",
+          "action": "confirmDeleteTicket()"
+        },
+        {
+          "component": "Cancel Button",
+          "type": "Button",
+          "label": "Cancel",
+          "action": "navigateBack()"
+        }
+      ]
+    }
+  ],
+
+  "category 10": "Admin Management",
+  "screens 10": [
+    {
+      "name": "Admin Dashboard Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Admin Dashboard"
+        },
+        {
+          "component": "Quick Stats",
+          "type": "StatsCardGroup",
+          "items": [
+            { "title": "Total Users", "value": "{totalUsers}" },
+            { "title": "Total Helpers", "value": "{totalHelpers}" },
+            { "title": "Total Errands", "value": "{totalErrands}" }
+          ]
+        },
+        {
+          "component": "Navigation Links",
+          "type": "NavMenu",
+          "items": [
+            { "label": "Manage Users", "action": "navigateTo('/admin/users')" },
+            {
+              "label": "Manage Helpers",
+              "action": "navigateTo('/admin/helpers')"
+            },
+            {
+              "label": "Manage Errands",
+              "action": "navigateTo('/admin/errands')"
+            },
+            {
+              "label": "Reports & Analytics",
+              "action": "navigateTo('/admin/reports')"
+            },
+            {
+              "label": "Platform Settings",
+              "action": "navigateTo('/admin/settings')"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Manage Users Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Manage Users" },
+        {
+          "component": "User Search Bar",
+          "type": "SearchInput",
+          "placeholder": "Search users by name or email"
+        },
+        {
+          "component": "User List",
+          "type": "List",
+          "items": "fetchAllUsers()"
+        },
+        {
+          "component": "User Item",
+          "type": "ListItem",
+          "content": "Name, Email, Status",
+          "actions": ["navigateTo('/admin/user/{userId}')", "suspendUser()"]
+        }
+      ]
+    },
+    {
+      "name": "Manage Helpers Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Manage Helpers" },
+        {
+          "component": "Helper Search Bar",
+          "type": "SearchInput",
+          "placeholder": "Search helpers by name or email"
+        },
+        {
+          "component": "Helper List",
+          "type": "List",
+          "items": "fetchAllHelpers()"
+        },
+        {
+          "component": "Helper Item",
+          "type": "ListItem",
+          "content": "Name, Email, Status, Verification Badge",
+          "actions": [
+            "navigateTo('/admin/helper/{helperId}')",
+            "suspendHelper()"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Manage Errands Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Manage Errands" },
+        {
+          "component": "Errand Search Bar",
+          "type": "SearchInput",
+          "placeholder": "Search errands by title or user"
+        },
+        {
+          "component": "Errand List",
+          "type": "List",
+          "items": "fetchAllErrands()"
+        },
+        {
+          "component": "Errand Item",
+          "type": "ListItem",
+          "content": "Title, Posted By, Status",
+          "actions": [
+            "navigateTo('/admin/errand/{errandId}')",
+            "deleteErrand()"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "User Details Screen (Admin View)",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "User Details" },
+        { "component": "Profile Picture", "type": "Image" },
+        {
+          "component": "User Info",
+          "type": "InfoCard",
+          "fields": [
+            { "label": "Name", "value": "{name}" },
+            { "label": "Email", "value": "{email}" },
+            { "label": "Status", "value": "{status}" },
+            { "label": "Role", "value": "{role}" }
+          ]
+        },
+        {
+          "component": "Suspend/Unsuspend Button",
+          "type": "Button",
+          "label": "{suspendActionLabel}",
+          "action": "toggleUserStatus()"
+        }
+      ]
+    },
+    {
+      "name": "Reports & Analytics Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Reports & Analytics"
+        },
+        {
+          "component": "Date Range Picker",
+          "type": "DateRangePicker",
+          "action": "fetchReports()"
+        },
+        {
+          "component": "Reports Summary",
+          "type": "StatsCardGroup",
+          "items": [
+            { "title": "New Users", "value": "{newUsersCount}" },
+            {
+              "title": "Completed Errands",
+              "value": "{completedErrandsCount}"
+            },
+            { "title": "Total Revenue", "value": "₦{totalRevenue}" }
+          ]
+        },
+        {
+          "component": "Trend Chart",
+          "type": "Chart",
+          "dataSource": "fetchPlatformTrends()"
+        }
+      ]
+    }
+  ],
+
+  "category 11": "Analytics",
+  "screens 11": [
+    {
+      "name": "User Analytics Dashboard",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "User Analytics" },
+        {
+          "component": "Date Range Picker",
+          "type": "DateRangePicker",
+          "action": "fetchUserAnalytics()"
+        },
+        {
+          "component": "Overview Cards",
+          "type": "StatsCardGroup",
+          "items": [
+            { "title": "Total Errands Created", "value": "{totalErrands}" },
+            { "title": "Completed Errands", "value": "{completedErrands}" },
+            { "title": "Pending Errands", "value": "{pendingErrands}" },
+            { "title": "Total Spent", "value": "₦{totalSpent}" }
+          ]
+        },
+        {
+          "component": "Spending Trend Chart",
+          "type": "Chart",
+          "dataSource": "fetchSpendingTrends()"
+        }
+      ]
+    },
+    {
+      "name": "Helper Analytics Dashboard",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Helper Analytics"
+        },
+        {
+          "component": "Date Range Picker",
+          "type": "DateRangePicker",
+          "action": "fetchHelperAnalytics()"
+        },
+        {
+          "component": "Overview Cards",
+          "type": "StatsCardGroup",
+          "items": [
+            { "title": "Total Jobs Accepted", "value": "{totalAcceptedJobs}" },
+            { "title": "Completed Jobs", "value": "{completedJobs}" },
+            { "title": "Cancelled Jobs", "value": "{cancelledJobs}" },
+            { "title": "Total Earnings", "value": "₦{totalEarnings}" }
+          ]
+        },
+        {
+          "component": "Earnings Trend Chart",
+          "type": "Chart",
+          "dataSource": "fetchEarningsTrends()"
+        },
+        {
+          "component": "Average Rating",
+          "type": "StarRating",
+          "value": "{averageRating}"
+        }
+      ]
+    },
+    {
+      "name": "Platform Analytics Dashboard (Admin)",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Platform Analytics"
+        },
+        {
+          "component": "Date Range Picker",
+          "type": "DateRangePicker",
+          "action": "fetchPlatformAnalytics()"
+        },
+        {
+          "component": "Overview Cards",
+          "type": "StatsCardGroup",
+          "items": [
+            { "title": "Total Users", "value": "{totalUsers}" },
+            { "title": "Total Helpers", "value": "{totalHelpers}" },
+            { "title": "Total Revenue", "value": "₦{totalRevenue}" },
+            { "title": "Errands Completed", "value": "{totalCompletedErrands}" }
+          ]
+        },
+        {
+          "component": "User Growth Chart",
+          "type": "Chart",
+          "dataSource": "fetchUserGrowthTrends()"
+        },
+        {
+          "component": "Revenue Trend Chart",
+          "type": "Chart",
+          "dataSource": "fetchRevenueTrends()"
+        },
+        {
+          "component": "Errand Category Distribution",
+          "type": "PieChart",
+          "dataSource": "fetchErrandCategoryStats()"
+        }
+      ]
+    }
+  ],
+
+  "category 12": "Offline Services",
+  "screens 12": [
+    {
+      "name": "Offline Booking Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Offline Booking"
+        },
+        {
+          "component": "Instruction Text",
+          "type": "Text",
+          "content": "Use USSD or SMS to create an offline errand request."
+        },
+        {
+          "component": "Booking ID Input",
+          "type": "Input",
+          "placeholder": "Enter Booking ID (optional for status check)"
+        },
+        {
+          "component": "Check Status Button",
+          "type": "Button",
+          "label": "Check Booking Status",
+          "action": "checkOfflineBookingStatus()"
+        },
+        {
+          "component": "Submit Feedback Button",
+          "type": "Button",
+          "label": "Submit Feedback",
+          "action": "navigateTo('/offline/feedback')"
+        }
+      ]
+    },
+    {
+      "name": "Offline Booking Status Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Booking Status" },
+        {
+          "component": "Booking ID Display",
+          "type": "Text",
+          "content": "Booking ID: {bookingId}"
+        },
+        {
+          "component": "Errand Type",
+          "type": "Text",
+          "content": "Errand Type: {errandType}"
+        },
+        {
+          "component": "Status Badge",
+          "type": "Badge",
+          "content": "{bookingStatus}"
+        },
+        {
+          "component": "Helper Assigned",
+          "type": "Text",
+          "content": "Helper: {helperName}",
+          "visibleWhen": "helperAssigned"
+        },
+        {
+          "component": "Estimated Time",
+          "type": "Text",
+          "content": "Estimated Time: {eta}"
+        }
+      ]
+    },
+    {
+      "name": "Offline Feedback Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Submit Offline Feedback"
+        },
+        {
+          "component": "Booking ID Input",
+          "type": "Input",
+          "placeholder": "Enter Booking ID"
+        },
+        {
+          "component": "Rating Stars",
+          "type": "StarRating",
+          "maxStars": 5,
+          "value": 0,
+          "action": "setRating()"
+        },
+        {
+          "component": "Feedback Text Area",
+          "type": "TextArea",
+          "placeholder": "Share your experience"
+        },
+        {
+          "component": "Submit Feedback Button",
+          "type": "Button",
+          "label": "Submit Feedback",
+          "action": "submitOfflineFeedback()"
+        }
+      ]
+    },
+    {
+      "name": "Offline Booking Confirmation Screen",
+      "layout": [
+        {
+          "component": "Heading",
+          "type": "Text",
+          "content": "Booking Confirmation"
+        },
+        {
+          "component": "Confirmation Text",
+          "type": "Text",
+          "content": "Your offline errand request has been successfully submitted. You will receive updates via SMS."
+        },
+        {
+          "component": "Booking ID Display",
+          "type": "Text",
+          "content": "Booking ID: {bookingId}"
+        },
+        {
+          "component": "Return to Dashboard Button",
+          "type": "Button",
+          "label": "Return to Dashboard",
+          "action": "navigateTo('/dashboard')"
+        }
+      ]
+    },
+    {
+      "name": "Offline Booking Error Screen",
+      "layout": [
+        { "component": "Heading", "type": "Text", "content": "Booking Error" },
+        {
+          "component": "Error Text",
+          "type": "Text",
+          "content": "{errorMessage}"
+        },
+        {
+          "component": "Try Again Button",
+          "type": "Button",
+          "label": "Try Again",
+          "action": "navigateTo('/offline/booking')"
+        }
+      ]
+    }
+  ]
+}

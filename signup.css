@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #008080;
+    margin-bottom: 20px;
+}
+
+.google-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #777;
+    cursor: pointer;
+ }
+
+ .google-button:hover {
+    background-color: #77afe7;
+ }
+
+.or-divider {
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+input[type="First Name"],
+input[type="Last Name"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+}
+
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #FFB300;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: gold;
+  }
+
+.create-account {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.create-account a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.terms {
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.terms a {
+    color: #007bff;
+}
